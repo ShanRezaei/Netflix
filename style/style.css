@@ -1,0 +1,184 @@
+html,
+body{
+    margin:0;
+    padding: 0;
+    height: 100%;
+   
+}
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+h3{
+    color: #e5e5e5;
+}
+a h3:hover{
+    color: #ffffff;
+}
+a{
+    text-decoration: none;
+}
+.wrapper{
+    min-width: 1050px;
+    min-height: 100%;
+    background-color: #141414;
+}
+.signInContainer{
+    background-color: #efefee;
+    height: 100vh;
+    display: flex;
+    /* when we give display flex to a div we can add following lines to have the inside content in the center */
+    align-items: center;
+    justify-content: center;
+}
+.column{
+    background-color: #ffffff;
+    min-height: 400px;
+    max-height: 100%;
+    width: 40%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 4px 5px;
+    padding: 4%;
+    /* we add this overflow to say if the hight of the page was not enough add scroll bar */
+    overflow-y: auto;
+
+}
+/* change the display of form */
+.column form{
+    display: flex;
+    flex-direction: column;
+}
+/* style elements input inside the form */
+.column form input[type="text"],
+.column form input[type="email"],
+.column form input[type="password"]
+{
+    font-size:91%;
+    /* top and buttom-left and right */
+    margin: 2% 0;
+    border: none;
+    border-bottom: 1px solid #dedede;
+    
+}
+.column form input[type="submit"]{
+    width: 20%;
+    font-weight: 500;
+    margin-top: 5%;
+    font-size: 100%;
+}
+.column .header{
+    padding-bottom: 6% ;
+}
+.column h3{
+    font-size: 150%;
+    font-weight: 600;
+    line-height: 32px;
+    margin: 0;
+    padding-top: 16px;
+}
+.column .header span{
+    font-size: 80%;
+    color: rgb(73, 70, 70);
+}
+.column .header img{
+    width:25% ;
+}
+.signInMessage{
+    font-size: 88%;
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 3%;
+
+}
+
+.signInMessage:hover{
+    opacity: 0.2;
+}
+
+.errorMessage{
+    color: crimson;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.previewImage,
+.previewVideo{
+    width: 100%;
+}
+
+.previewContainer{
+    position: relative;
+    display: flex;
+}
+.previewContainer.small{
+    width: 230px;
+    height: 129px;
+    margin-right: 4px;
+    display: inline-flex;
+}
+.previewContainer.small img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} 
+
+
+.previewOverlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.previewOverlay .mainDetails h3{
+    color: #ffffff;
+    font-size: 40px;
+    margin: 15px 0;
+
+}
+.mainDetails{
+    position: relative;
+    top: 35%;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainDetails button{
+    background-color: rgba(51, 51,51, 0.4);
+    color: #ffffff;
+    border: none;
+    min-width: 150px;
+    padding: 0 38px;
+    height: 50px;
+    max-height: 50px;
+    font-size: 18px;
+    border-radius: 2px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.category{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.entities{
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+button i{
+    color: inherit;
+}
+
+.mainDetails button:hover{
+    background-color: #e6e6e6;
+    color: black;
+}
+.previewCategories{
+    padding:0 50px;
+}

@@ -1,0 +1,44 @@
+<?php
+
+class entityProvider{
+
+    public static function getEntities($con,$categoryId,$limit){
+
+        // do not forget to put space at the end of the query to concat
+        $sql="SELECT * FROM entities ";
+        if($categoryId != null){
+            $sql .="WHERE categoryId=:categoryId ";
+
+        }
+
+        $sql .="ORDER BY RAND() LIMIT :limit";
+
+        $query=$con->prepare($sql);
+
+        if($categoryId != null){
+            $query->bindValue(":categoryId",$categoryId);
+
+        }
+
+        $query->bindValue(":limit",$limit,PDO::PARAM_INT);
+        $query->execute();
+
+        $result=array();
+        while($row=$query->fetch(PDO::FETCH_ASSOC)){
+            $result[]=new Entity($con,$row);
+
+        }
+
+        return $result;
+
+
+
+    }
+
+
+
+
+}
+
+
+?>
